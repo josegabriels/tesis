@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<div class="dashboard">
+    <!-- <app-sidebar style="width: 25%;"></app-sidebar> -->
+    <app-card-shop [infoCard]="infoCard" [calification]="getCalification(infoCard.seller.seller_reputation.level_id)" style="width: 25%;"></app-card-shop>
+    <div class="content-page">
+        <div class="buttons">
+            <div class="button">
+                <app-button-main buttonText="Actualizar"></app-button-main>
+            </div>
+            <div class="button">
+                <app-button-main buttonText="Guardar"></app-button-main>
+            </div>
+        </div>
+        <div class="info-cards">
+            <div class="info-card">
+                <app-card-info-puntual [parametroLabel]="parametroLabel1"
+                                       [valorParametro]="valorParametro1"></app-card-info-puntual>
+            </div>
+            <div class="info-card">
+                <app-card-info-puntual [parametroLabel]="parametroLabel2"
+                                       [valorParametro]="valorParametro2"></app-card-info-puntual>
+            </div>
+            <div class="info-card">
+                <app-card-info-puntual [parametroLabel]="parametroLabel3"
+                                       [valorParametro]="valorParametro3"></app-card-info-puntual>
+            </div>
+        </div>
+        <div class="tabla-metrica">
+            <app-table-metrics [infoCard]="infoCard"></app-table-metrics>
+        </div>
+        <div class="label-metrica">
+            <h5>Métricas</h5>
+        </div>
+        <div class="card-metricas">
+            <app-card-metrics class="card-metrica"></app-card-metrics>
+            <app-card-metrics class="card-metrica"></app-card-metrics>
+            <app-card-metrics class="card-metrica"></app-card-metrics>
+        </div>
+    </div>
+</div>
