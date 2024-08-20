@@ -17,6 +17,9 @@ import { TableMetricsComponent } from './components/tables/table-metrics/table-m
 import { TableAdvertisingComponent } from './components/tables/table-advertising/table-advertising.component';
 import { CardInfoPuntualComponent } from './components/cards/card-info-puntual/card-info-puntual.component';
 import { ButtonMainComponent } from './components/buttons/button-main/button-main.component';
+import { CardEventoComponent } from './components/cards/card-evento/card-evento.component';
+import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
+import { BaseChartDirective } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -33,16 +36,19 @@ import { ButtonMainComponent } from './components/buttons/button-main/button-mai
     TableMetricsComponent,
     TableAdvertisingComponent,
     CardInfoPuntualComponent,
-    ButtonMainComponent
+    ButtonMainComponent,
+    CardEventoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BaseChartDirective
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideCharts(withDefaultRegisterables())
   ],
   bootstrap: [AppComponent]
 })

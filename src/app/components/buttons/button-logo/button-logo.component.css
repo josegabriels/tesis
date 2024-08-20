@@ -1,0 +1,9 @@
+img{
+    width: 50px;
+    height: 60px;
+    margin-right: 30px;
+}
+button{
+    background: rgb(24,24,27);
+    border: none;
+}
