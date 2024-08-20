@@ -20,6 +20,9 @@ import { ButtonMainComponent } from './components/buttons/button-main/button-mai
 import { CardEventoComponent } from './components/cards/card-evento/card-evento.component';
 import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 import { BaseChartDirective } from 'ng2-charts';
+import { TableTrackingComponent } from './components/tables/table-tracking/table-tracking.component';
+import { DashboardInformationComponent } from './components/dashboard-information/dashboard-information.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { BaseChartDirective } from 'ng2-charts';
     TableAdvertisingComponent,
     CardInfoPuntualComponent,
     ButtonMainComponent,
-    CardEventoComponent
+    CardEventoComponent,
+    TableTrackingComponent,
+    DashboardInformationComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
