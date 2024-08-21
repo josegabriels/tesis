@@ -1,4 +1,4 @@
-img{
+/* img{
     width: 50px;
     height: 60px;
     margin-right: 30px;
@@ -6,4 +6,44 @@ img{
 button{
     background: rgb(24,24,27);
     border: none;
+} */
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 50px; /* Limita el tamaño máximo */
+    max-height: 50px;
+    margin-right: 1.875rem; /* 30px equivale a 1.875rem con un font-size base de 16px */
+}
+
+button.logo-button {
+    background-color: rgb(18, 18, 18);
+    border: none;
+    padding: 0.5rem; /* Espaciado interno para mejorar la accesibilidad en dispositivos táctiles */
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    img {
+        max-width: 40px; /* Reduce el tamaño de la imagen en pantallas más pequeñas */
+        max-height: 48px;
+        margin-right: 1rem; /* Ajusta el margen */
+    }
+
+    button.logo-button {
+        padding: 0.3rem; /* Reduce el padding en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        max-width: 30px;
+        max-height: 36px;
+        margin-right: 0.5rem;
+    }
+
+    button.logo-button {
+        padding: 0.2rem;
+    }
 }

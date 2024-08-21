@@ -23,7 +23,9 @@ import { BaseChartDirective } from 'ng2-charts';
 import { TableTrackingComponent } from './components/tables/table-tracking/table-tracking.component';
 import { DashboardInformationComponent } from './components/dashboard-information/dashboard-information.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DatePipe } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,11 +52,14 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    BaseChartDirective
+    BaseChartDirective,
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [
     provideClientHydration(),
-    provideCharts(withDefaultRegisterables())
+    provideCharts(withDefaultRegisterables()),
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

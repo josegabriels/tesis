@@ -1,7 +1,7 @@
 <!-- sidebar.component.html -->
 <div class="sidebar">
-    <label>DEHUKA</label>
-    <img class="logo-sidebar" src="../../../../assets/zapas.jpg">
+    <label>{{nickName}}</label>
+    <img class="logo-sidebar" [src]="'../../../assets/'+urlImage">
     <div class="button-sidebar" (click)="seleccionarOpcion('roadmap')">
       <app-button-main buttonText="Diagnóstico y ROADMAP"></app-button-main>
     </div>

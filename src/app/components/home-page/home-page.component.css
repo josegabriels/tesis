@@ -7,7 +7,7 @@
     margin: 0;
     background-color: rgb(18, 18, 18);
     height: 93vh;
-    border-top: 5px solid rgb(14, 14, 14);
+    border-top: 1px solid rgb(14, 14, 14);
 }
 .label-user{
     height: 75px;
@@ -18,7 +18,7 @@
 .cards{
     padding: 20px;
     display: flex;
-    
+    justify-content: center;
 }
 .card{
     background-color: rgb(18, 18, 18);

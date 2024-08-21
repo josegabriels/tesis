@@ -53,8 +53,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgb(0,184,252);
 }
 a{
-    text-decoration: none;
+    /* text-decoration: none; */
     color: rgb(0,184,252);
+    cursor: pointer; /* Cambia el cursor a una manito */
+    transition: color 0.3s;
 }

@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { ComunicationService } from '../../services/comunicationService';
 import { DatePipe } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-dashboard-information',
   templateUrl: './dashboard-information.component.html',
   styleUrl: './dashboard-information.component.css'
 })
 export class DashboardInformationComponent {
+  nickName: string | null= 'zapas';
   eventos=[
     {fechaEvento:'27/09/2024',urlImagenEvento:'../../../../assets/Black_Friday.jpg'},
     {fechaEvento:'23/09/2024',urlImagenEvento:'../../../../assets/Cyber_Monday.jpg'},
@@ -55,7 +57,7 @@ export class DashboardInformationComponent {
   flagFechasEspeciales:Boolean=true;
   flagRoadMap:Boolean=false;
   flagSeguimiento:Boolean=false;
-  constructor(private comunicationService: ComunicationService,private datePipe: DatePipe) {}
+  constructor(private comunicationService: ComunicationService,private datePipe: DatePipe,private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.comunicationService.seleccionarOpcion$.subscribe((opcion: string) => {
@@ -67,6 +69,9 @@ export class DashboardInformationComponent {
       } else if (opcion === 'fechasEspeciales') {
         this.flagFechasEspeciales = true;
       }
+    });
+    this.route.paramMap.subscribe(params => {
+      this.nickName = params.get('shopName');
     });
   }
   resetFlags() {

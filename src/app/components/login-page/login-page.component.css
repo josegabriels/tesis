@@ -2,111 +2,125 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 .content-page {
     display: flex;
-    height: 1000px;
-    background-color: #f0f0f0; /* Cambia este color según tu preferencia */
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    flex-direction: column; /* Para que las columnas se apilen en pantallas pequeñas */
 }
-.panel-left {
-    width: 50%; /* Ajusta este ancho según tus necesidades */
-    background: linear-gradient(to right, rgb(24,24, 27), rgb(56,46, 51));
+
+.panel-left, .panel-right {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
 }
 
-/* .logo{
-    width: 12%;
-    height: 10%;
-    margin-bottom: 100px;
-    background: url("../../../assets/LogoGG.png");
-} */
-img{
+.panel-left {
+    background: linear-gradient(to right, rgb(24, 24, 27), rgb(56, 46, 51));
+    padding: 2rem;
+}
+
+img {
     width: 100px;
     height: 120px;
 }
-.footer-logo{
-    margin-bottom: 50px;
+
+.footer-logo {
+    margin-bottom: 1.25rem;
+    text-align: center;
+    color: white;
 }
+
 .panel-right {
     background-image: url('../../../assets/portada.jpg');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
-    background-repeat: no-repeat; /* No repite la imagen */
-    background-position: center; /* Centra la imagen */
-    width: 50%; /* Asegúrate de que el contenedor tenga un ancho adecuado */
-    height: 100%; /* Asegúrate de que el contenedor tenga una altura adecuada */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh; /* Ajuste de altura para pantallas pequeñas */
+    width: 100%; /* Asegura que el contenedor ocupe el ancho completo en pantallas pequeñas */
 }
 
 .login-form {
-    background-color: rgba(24, 24, 24, 0);
-    padding: 20px;
-    border:none;
-    
-    width: 50%;
-    height: 60%;
+    background-color: rgba(24, 24, 24, 0.8);
+    padding: 1.25rem;
+    border: none;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
 }
 
 .login-form h2 {
-    margin: 0 0 20px;
+    margin-bottom: 1.25rem;
     text-align: center;
 }
 
 .login-form label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     color: white;
-    font-family: sans-serif;
 }
 
 .login-form input[type="email"],
 .login-form input[type="password"] {
-    width: 98%;
-    height: 25px;
-    padding: 5px;
-    margin-bottom: 30px;
-    border: 1px solid rgb(49,49,49);
-    background: rgb(49,49,49);
+    width: 100%;
+    height: 2rem;
+    padding: 0.625rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid rgb(49, 49, 49);
+    background: rgb(49, 49, 49);
     border-radius: 8px;
+    color: white;
+    box-sizing: border-box;
 }
 
 .login-form input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 .login-form button {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 0.625rem;
     border-radius: 8px;
     cursor: pointer;
     border: none;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
+    padding: 0.875rem;
+    font-size: 1rem;
 }
 
 .login-form .btn-primary {
-    width: 100%;
     background-color: #007bff;
     color: #ffffff;
-    height: 35px;
-    
 }
 
 .login-form .btn-google {
-    width: 100%;
     background-color: #db4437;
     color: #ffffff;
-    height: 35px;
 }
 
-.login-form .checkbox-container {
+.checkbox-container {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
-.login-form .checkbox-container label {
-    margin: 0;
+@media (min-width: 768px) {
+    .content-page {
+        flex-direction: row; /* En pantallas más grandes, los paneles se muestran lado a lado */
+        height: 100vh;
+    }
+
+    .panel-right {
+        height: 100%;
+        width: 50%;
+    }
+
+    .panel-left {
+        width: 50%;
+    }
 }

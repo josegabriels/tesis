@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ComunicationService } from '../../services/comunicationService';
 
 @Component({
@@ -7,9 +7,21 @@ import { ComunicationService } from '../../services/comunicationService';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
+  @Input() nickName: string | null= '';
+  urlImage:string='';
   constructor(private comunicationService: ComunicationService) {}
   ngOnInit(): void {
-    
+    switch(this.nickName){
+      case 'DEHUKA':
+        this.urlImage='DEHUKA.png';
+        break
+      case 'TECHIQ':
+        this.urlImage='TECHIQ.jpg';
+        break
+      case 'TECNOENLINEA.COM.AR':
+        this.urlImage='TECNOENLINEA.PNG'
+        break;
+    }
   }
 
   seleccionarOpcion(opcion: string) {

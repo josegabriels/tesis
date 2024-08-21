@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AccountsService } from '../../services/accounts.service';
 import { Account } from '../../models/account-status.model';
 
@@ -30,7 +30,7 @@ export class DashboardComponent implements OnInit {
   tablaPublicidadData:any[]=[];
   publicidadCardsData:any[]=[];
 
-  constructor(private route: ActivatedRoute, private accountsService: AccountsService) { }
+  constructor(private route: ActivatedRoute, private accountsService: AccountsService,private router: Router) { }
 
   ngOnInit(): void {
     this.tablaMetricasData=[
@@ -93,5 +93,7 @@ export class DashboardComponent implements OnInit {
     }
     return parseInt(str.substring(0, i), 10);
   }
-
+  seeInformation() {
+    this.router.navigate([`/informationCard/${this.infoCard.seller.nickname}`]);// Navegar a la ruta especificada
+  }
 }
