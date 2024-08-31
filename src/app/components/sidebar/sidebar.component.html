@@ -1,0 +1,15 @@
+<!-- sidebar.component.html -->
+<div class="sidebar">
+    <label>{{nickName}}</label>
+    <img class="logo-sidebar" [src]="'../../../assets/'+urlImage">
+    <div class="button-sidebar" (click)="seleccionarOpcion('roadmap')">
+      <app-button-main buttonText="Diagnóstico y ROADMAP"></app-button-main>
+    </div>
+    <div class="button-sidebar" (click)="seleccionarOpcion('seguimiento')">
+      <app-button-main buttonText="Seguimiento"></app-button-main>
+    </div>
+    <div class="button-sidebar" (click)="seleccionarOpcion('fechasEspeciales')">
+      <app-button-main buttonText="Fechas especiales"></app-button-main>
+    </div>
+  </div>
+    

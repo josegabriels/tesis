@@ -1,1 +1,19 @@
 <p>table-advertising works!</p>
+<table class="custom-table">
+    <thead class="custom-header">
+      <tr>
+        <th scope="col" class="first-column">Indicadores</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Detalle</th>
+        <th scope="col">Estado</th>
+      </tr>
+    </thead>
+    <tbody class="custom-body">
+      <tr *ngFor="let item of tablaPublicidadData">
+        <td class="first-column">{{item.Indicadores}}</td>
+        <td>{{item.Cantidad}}</td>
+        <td>{{item.Detalle}}</td>
+        <td>{{item.Estado}}</td>
+      </tr>
+    </tbody>
+  </table>

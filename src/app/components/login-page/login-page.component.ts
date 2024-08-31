@@ -27,10 +27,20 @@ export class LoginPageComponent {
   }
   
   onSubmit(){
-    if(this.authService.validateUser(this.formulario.value.email, this.formulario.value.password)){
-      this.router.navigate(['inicio']);
+    console.log('onSubmit llamado');
+    
+    if (this.authService.validateUser(this.formulario.value.email, this.formulario.value.password)) {
+      console.log('Inicio de sesión exitoso!');
+      var user=this.getUserFromEmail(this.formulario.value.email);
+      this.router.navigate([`/inicio/${user}`]);
     } else {
+      // Usuario no válido
       this.errorMessage = 'Correo electrónico o contraseña incorrectos.';
     }
+  }
+  getUserFromEmail(value: string): string {
+    if (!value) return value; // Si el valor está vacío o nulo, devolverlo tal cual
+    const atIndex = value.indexOf('@');
+    return atIndex !== -1 ? value.substring(0, atIndex) : value;
   }
 }

@@ -15,11 +15,22 @@ export class CardShopComponent implements OnInit{
   get starsArray(): number[] {
     return this.calification ? Array(this.calification).fill(0) : [];
   }
-
+  imageName: string = 'zapas';
   constructor(private router: Router){}
 
   ngOnInit(): void {
     
+    switch(this.infoCard.seller.nickname){
+      case 'DEHUKA':
+        this.imageName='DEHUKA.png';
+        break
+      case 'TECHIQ':
+        this.imageName='TECHIQ.jpg';
+        break
+      case 'TECNOENLINEA.COM.AR':
+        this.imageName='TECNOENLINEA.PNG'
+        break;
+    }
   }
 
   viewInfoCard() {

@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Para levantar el proyecto se deben instalar bootstrap, jquery, chart.js, ng2-charts, font awesome (para los iconos)
+
+comandos
+npm install bootstrap @popperjs/core
+npm install jquery --save
+npm install chart.js ng2-charts
+npm install @fortawesome/fontawesome-free
+

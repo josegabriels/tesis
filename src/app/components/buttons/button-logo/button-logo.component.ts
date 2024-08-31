@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-button-logo',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './button-logo.component.css'
 })
 export class ButtonLogoComponent {
-
+  @Output() buttonClick = new EventEmitter<void>();
+  constructor() { }
+  clickButton(){
+    this.buttonClick.emit();
+  }
 }

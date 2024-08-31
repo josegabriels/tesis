@@ -1,0 +1,80 @@
+/* .content-card{
+    height: 700px;
+    background-color:rgb(24,24,27);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+label{
+    font-size: 25px;
+    color: white;
+} */
+.content-card {
+    height: 100%;
+    max-height: 700px; /* Limitar la altura máxima */
+    background-color: rgb(24,24,27);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem; /* Añadir padding interno para mejorar la presentación */
+    box-sizing: border-box;
+}
+
+img {
+    border-radius: 50%;
+    width: 80%;
+    height: 35%;
+    max-width: 250px; /* Limitar el ancho máximo */
+    max-height: 250px;
+    /*height: auto;  Ajuste automático de la altura */
+    margin-bottom: 1.875rem; /* 30px en rem */
+    margin-top: 3.75rem; /* 60px en rem */
+}
+
+label {
+    font-size: 1.5625rem; /* 25px en rem */
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .content-card {
+        padding: 1.5rem;
+    }
+
+    img {
+        max-width: 200px; /* Reducir el tamaño de la imagen en pantallas medianas */
+        margin-bottom: 1.5rem; /* Ajuste del margen */
+        margin-top: 3rem;
+    }
+
+    label {
+        font-size: 1.25rem; /* Reducir el tamaño de la fuente en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .content-card {
+        padding: 1rem;
+    }
+
+    img {
+        max-width: 150px; /* Reducir aún más el tamaño de la imagen en pantallas pequeñas */
+        margin-bottom: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    label {
+        font-size: 1.125rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+    }
+}

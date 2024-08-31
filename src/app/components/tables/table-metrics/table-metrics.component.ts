@@ -9,6 +9,7 @@ import { Account } from '../../../models/account-status.model';
 export class TableMetricsComponent implements OnInit{
 
   @Input() infoCard!:Account;
+  @Input() tablaMetricasData:any[]=[];
   cancelaciones:number=0;
   total:number=0;
   reclamos:number=0;

@@ -1,4 +1,4 @@
-.button-main {
+/* .button-main {
     background-color: rgb(18, 18, 18);
     color: white;
     border: 2px solid #00c3ff;
@@ -14,4 +14,37 @@
     background-color: #00c3ff;
     color: black;
   }
-  
+   */
+   .button-main {
+    background-color: rgb(18, 18, 18);
+    color: white;
+    border: 2px solid #00c3ff;
+    border-radius: 15px;
+    padding: 0.625rem 1.25rem; /* 10px 20px en unidades rem */
+    font-size: 1rem; /* 16px en unidades rem */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%; /* Ajuste del ancho al 100% del contenedor */
+    max-width: 150px; /* Limitar el ancho máximo */
+    box-sizing: border-box; /* Asegura que el padding y borde se incluyan en el tamaño total del botón */
+}
+
+.button-main:hover {
+    background-color: #00c3ff;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .button-main {
+        padding: 0.5rem 1rem; /* Reducir padding en pantallas medianas */
+        font-size: 0.9rem; /* Reducir font-size ligeramente en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .button-main {
+        padding: 0.4rem 0.8rem; /* Reducir padding en pantallas pequeñas */
+        font-size: 0.8rem; /* Reducir font-size en pantallas pequeñas */
+        max-width: 120px; /* Reducir el ancho máximo en pantallas pequeñas */
+    }
+}
