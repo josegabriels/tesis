@@ -1,4 +1,4 @@
-.header{
+/* .header{
     margin: 0;
     background-color:rgb(24, 24, 27);
     height: 75px;
@@ -24,4 +24,64 @@
     background-color: rgb(18, 18, 18);
     padding-left: 30px;
     border: none;
+} */
+.header {
+    margin: 0;
+    background-color: rgb(24, 24, 27);
+    height: 75px;
+    width: 100%;
+}
+
+.content-page {
+    margin: 0;
+    background-color: rgb(18, 18, 18);
+    min-height: 93vh;
+    border-top: 1px solid rgb(14, 14, 14);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.label-user {
+    height: auto;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.cards {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: rgb(18, 18, 18);
+    padding: 20px;
+    border: none;
+    flex: 1 1 300px; /* Esto permite que las tarjetas se ajusten automáticamente */
+    max-width: 400px; /* Tamaño máximo para las tarjetas */
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .content-page {
+        padding: 10px;
+    }
+
+    .label-user {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    .cards {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        padding: 15px;
+    }
 }

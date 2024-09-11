@@ -20,7 +20,7 @@
 th, td {
     border: 0.1px solid black;
     padding: 10px;
-    text-align: center; /* Centrar horizontalmente */   
+    text-align: center;
 }
 th{
     border: 0.1px solid rgb(14, 13, 13);
@@ -28,15 +28,37 @@ th{
 }
 
 table {
-    border-collapse: separate; /* Necesario para que border-radius funcione */
-    border-spacing: 0; /* Espaciado entre celdas */
-    width:1330px;
+    border-collapse: separate;
+    border-spacing: 0; 
+    width:80%;
     margin: 10px 0;
     border: 0.1px solid black;
     border-radius: 10px;
-    overflow: hidden; /* Para asegurarse de que las celdas respeten los bordes redondeados */
+    overflow: hidden; 
 }
 
 .first-column{
     text-align: start;
+}
+@media (max-width: 768px) {
+    th, td {
+        font-size: 12px; /* Ajusta el tamaño del texto */
+        padding: 8px;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustar columnas largas */
+    .first-column {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+    
+    /* Scroll horizontal para dispositivos pequeños */
+    .custom-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
