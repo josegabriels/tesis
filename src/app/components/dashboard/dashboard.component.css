@@ -39,10 +39,10 @@
     background-color: rgb(18, 18, 18);
 }
 .tabla-metrica{
-    width: 100%;
+    /* width: 100%;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 55px;
+    justify-content: flex-end; */
+    padding-left: 30px;
     padding-bottom: 30px;
 }
 .label-metrica{
@@ -63,4 +63,31 @@
 .tabla-publicidad{
     padding-left: 30px;
     padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column; /* Acomoda los elementos en columna */
+    }
+
+    .content-page {
+        width: 100%;
+        padding: 0;
+    }
+
+    .info-cards {
+        flex-direction: column; /* Las tarjetas se acomodan una debajo de la otra */
+    }
+
+    .info-card {
+        max-width: 100%; /* Tarjetas ocupan todo el ancho disponible */
+    }
+
+    .button {
+        padding: 10px;
+        margin: 5px 0; /* Más espacio entre botones en pantallas pequeñas */
+    }
+
+    .tabla-metrica, .card-metricas, .tabla-publicidad {
+        padding: 0 10px;
+    }
 }
